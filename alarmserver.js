@@ -3,6 +3,7 @@ var app = express()
 var bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
+const PORT = process.env.PORT || 3000;
 
  
 const accountSid = 'AC1aeae7c6ab1bc3221325a5d36d1bdd96';
@@ -59,5 +60,8 @@ app.post('/uproute', function(req, res) {
   }
 })
 
-app.listen(3000);
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
 console.log("Server Up")
