@@ -41,13 +41,13 @@ app.post('/', function (req, res){
 app.post('/uproute', function(req, res) {
   if (req.body.userId === 'gt8Y-GLLpg)z]2_p') {
     res.sendStatus(200)
-      client.messages
-    .create({
-       body: 'Account Successful',
-       from: '+12058518621',
-       to: '+17633608438'
-     })
-    .then(message => console.log(message.sid));
+    //   client.messages
+    // .create({
+    //    body: 'Account Successful',
+    //    from: '+12058518621',
+    //    to: '+17633608438'
+    //  })
+    // .then(message => console.log(message.sid));
   } else {
     client.messages
     .create({
