@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 
  
 const accountSid = 'AC1aeae7c6ab1bc3221325a5d36d1bdd96';
-const authToken = '511d4e3771ee2bd0ac75996839f7a595';
+const authToken = '3e90d6ea3d0e1996cd9198d42ebf6cf6';
+
 const client = require('twilio')(accountSid, authToken);
 
 app.get('/', function (req, res) {
@@ -21,7 +22,7 @@ app.post('/', function (req, res){
     .create({
        body: 'Alert! Alert! Robbery In Progress!',
        from: '+12058518621',
-       to: '+16514368331'
+       to: '+16512807946'
      })
     .then(message => console.log(message.sid));
     res.sendStatus(200)
@@ -30,7 +31,7 @@ app.post('/', function (req, res){
     .create({
        body: 'Alert! Alert! Server Security Breach!',
        from: '+12058518621',
-       to: '+16514368331'
+       to: '+16512807946'
      })
     .then(message => console.log(message.sid));
     res.sendStatus(404)
@@ -53,7 +54,7 @@ app.post('/uproute', function(req, res) {
     .create({
        body: 'Alert! Alert! Server Security Breach!',
        from: '+12058518621',
-       to: '+16514368331'
+       to: '+16512807946'
      })
     .then(message => console.log(message.sid));
     res.send(404)
